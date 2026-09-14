@@ -1,0 +1,26 @@
+LEF CORPORATE WEB v2.0 — DEMOSTRACIÓN FUNCIONAL
+
+CÓMO ABRIRLA
+1. Descomprima el archivo ZIP.
+2. Abra la carpeta LEF-CORPORATE-WEB-v2.0.
+3. Haga doble clic en index.html.
+4. El sitio se abrirá en su navegador.
+
+INCLUYE
+- Home corporativo.
+- Nosotros.
+- Soluciones LEF.
+- LEF Administración de Comunidades.
+- LEF SECURITY.
+- LEF Capacitaciones.
+- Recursos / Biblioteca.
+- Noticias / Actualidad.
+- Contacto.
+- Menú responsive para celular.
+- Navegación entre todas las páginas.
+- Logos de identidad aprobados usados como recursos gráficos.
+
+IMPORTANTE
+- El formulario es demostrativo y no envía datos todavía.
+- No hay hosting ni dominio conectados aún.
+- La siguiente fase conectará formularios, canales oficiales, SEO final y publicación.

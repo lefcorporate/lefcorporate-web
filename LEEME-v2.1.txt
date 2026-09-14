@@ -1,0 +1,10 @@
+LEF CORPORATE WEB v2.1 — PREPUBLICACIÓN
+
+PARA VERLA
+Abra index.html en el navegador.
+
+ESTADO
+Esta versión ya está preparada técnicamente para pasar a hosting. El formulario tiene estructura real y validaciones, pero permanece sin endpoint para evitar enviar información a un destino inventado.
+
+SIGUIENTE PASO CONCRETO
+Definir dominio + hosting + correo receptor + WhatsApp oficial. Con esos datos se realiza la conexión final, SEO con URL definitiva y publicación.

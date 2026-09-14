@@ -1,0 +1,28 @@
+LEF CORPORATE WEB v2.1 — INTEGRACIÓN REAL / PREPUBLICACIÓN
+
+COMPLETADO EN v2.1
+[OK] Sitio multipágina funcional.
+[OK] Navegación escritorio y móvil.
+[OK] Tres áreas: Administración, LEF SECURITY y Capacitaciones.
+[OK] Formularios preparados con campos y nombres reales.
+[OK] Manejador de envío preparado para conectar un endpoint seguro.
+[OK] Metadatos básicos SEO.
+[OK] robots.txt preparado.
+[OK] Mejora de accesibilidad: salto al contenido, foco visible, labels.
+[OK] Mensajes de éxito/error preparados.
+[OK] Arquitectura preparada para hosting.
+
+DATOS REALES QUE FALTAN PARA ACTIVAR PUBLICACIÓN
+[ ] Dominio definitivo registrado/configurado en NIC Chile.
+[ ] Hosting o plataforma de publicación.
+[ ] Correo oficial que recibirá formularios.
+[ ] Teléfono/WhatsApp Business oficial que se publicará.
+[ ] Enlaces oficiales de redes sociales que se quieran mostrar.
+[ ] Política de privacidad definitiva.
+[ ] Endpoint/servicio seguro del formulario.
+[ ] URL definitiva para sitemap.xml, canonical y Open Graph.
+[ ] Revisión final de logos maestros y textos.
+[ ] Prueba final en celular y computador.
+
+IMPORTANTE
+No se inventaron datos de contacto, dominio, correo ni URLs. Esos campos se conectarán con los datos oficiales antes de publicar.
