@@ -95,7 +95,7 @@ h3{font-size:21px;margin:12px 0}
 .searchbar input{flex:1;border:1px solid var(--line);border-radius:9px;padding:14px}
 .tagrow{display:flex;flex-wrap:wrap;gap:10px}
 .tag{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 13px;font-size:13px;font-weight:750}
-.contact-grid{grid-template-columns:repeat(2,1fr);}
+.grid-3.contact-grid{grid-template-columns:repeat(2,1fr);}
 @media(max-width:980px){
   .navlinks,.nav>.btn{display:none}.menu-btn{display:block}
   .contact-grid{grid-template-columns:1fr}
