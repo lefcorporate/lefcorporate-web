@@ -5,6 +5,31 @@
 <meta name="robots" content="index,follow">
 <meta name="description" content="Seguridad privada, prevención, auditorías y gestión de riesgos.">
 <link rel="stylesheet" href="assets/css/site.css">
+
+<style>
+/* Ajuste visual global — LEF SECURITY */
+.service-detail > .container{width:min(1120px,calc(100% - 48px));margin-inline:auto;}
+.service-detail .section-head{max-width:100%;}
+.service-detail .section-head>div{width:100%;}
+.service-detail .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch;}
+.service-detail .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch;}
+.service-detail .grid-2>.card,.service-detail .grid-3>.card{width:auto;min-width:0;height:100%;box-sizing:border-box;}
+.service-detail .notice{width:100%;box-sizing:border-box;margin-top:44px;}
+.service-detail>.container>.hero-actions{margin-top:22px;}
+.service-detail{padding-block:72px;}
+.service-detail+.service-detail{padding-top:72px;}
+.service-detail .section-head:not(:first-child){margin-top:44px;}
+@media (max-width:900px){
+ .service-detail > .container{width:min(100% - 32px,1120px);}
+ .service-detail .grid-3{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:640px){
+ .service-detail{padding-block:52px;}
+ .service-detail > .container{width:min(100% - 24px,1120px);}
+ .service-detail .grid-2,.service-detail .grid-3{grid-template-columns:1fr;}
+ .service-detail .section-head:not(:first-child),.service-detail .notice{margin-top:34px;}
+}
+</style>
 </head><body><a class="skip-link" href="#contenido">Saltar al contenido</a>
 <div class="topbar"><div class="container"><span>LEF CORPORATE · Gestión · Seguridad · Capacitación</span><span>Santiago · Chile</span></div></div>
 <header class="site-header">
@@ -31,7 +56,7 @@
 <div class="area-logo-box"><img src="assets/img/lef-security.png" alt="LEF SECURITY"></div></div></section>
 <section class="section" id="servicios"><div class="container"><div class="section-head"><div class="eyebrow">SERVICIOS</div><h2>Áreas de trabajo</h2></div><div class="grid-3"><article class="card" onclick="location.href='#diagnostico-seguridad'" style="cursor:pointer"><span class="badge">01</span><h3>Diagnóstico de seguridad</h3><p>Levantamiento de vulnerabilidades, controles y brechas.</p></article><article class="card" onclick="location.href='#auditorias'" style="cursor:pointer"><span class="badge">02</span><h3>Auditorías</h3><p>Revisión de procesos, registros, infraestructura y procedimientos.</p></article><article class="card" onclick="location.href='#matrices-riesgo'" style="cursor:pointer"><span class="badge">03</span><h3>Matrices de riesgo</h3><p>Identificación, evaluación y priorización de riesgos.</p></article><article class="card" onclick="location.href='#protocolos'" style="cursor:pointer"><span class="badge">04</span><h3>Protocolos</h3><p>Procedimientos para accesos, incidentes y contingencias.</p></article><article class="card" onclick="location.href='#supervision'" style="cursor:pointer"><span class="badge">05</span><h3>Supervisión</h3><p>Evaluación de puestos, rondas, registros y desempeño.</p></article><article class="card" onclick="location.href='#proyectos'" style="cursor:pointer"><span class="badge">06</span><h3>Proyectos</h3><p>Apoyo en CCTV, control de acceso, alarmas y soluciones de seguridad.</p></article></div></div></section>
 <section class="band"><div class="container"><div class="section-head"><div class="eyebrow">METODOLOGÍA</div><h2>Cómo trabajamos</h2></div><div class="steps"><div class="step"><strong>01</strong><h3>Identificar</h3><p>Reconocer amenazas y vulnerabilidades.</p></div><div class="step"><strong>02</strong><h3>Evaluar</h3><p>Valorar riesgos y controles.</p></div><div class="step"><strong>03</strong><h3>Planificar</h3><p>Definir medidas y prioridades.</p></div><div class="step"><strong>04</strong><h3>Implementar</h3><p>Aplicar mejoras.</p></div><div class="step"><strong>05</strong><h3>Verificar</h3><p>Supervisar y ajustar.</p></div></div></div></section>
-  <section class="section" id="diagnostico-seguridad">
+  <section class="section service-detail" id="diagnostico-seguridad">
   <div class="container">
 
     <div class="section-head">
@@ -190,7 +215,7 @@
 
   </div>
 </section>
-  <section class="section" id="auditorias">
+  <section class="section service-detail" id="auditorias">
   <div class="container">
 
     <div class="section-head">
@@ -349,7 +374,7 @@
 
   </div>
 </section>
-  <section class="section" id="matrices-riesgo">
+  <section class="section service-detail" id="matrices-riesgo">
   <div class="container">
 
     <div class="section-head">
@@ -508,7 +533,7 @@
 
   </div>
 </section>
-  <section class="section" id="protocolos">
+  <section class="section service-detail" id="protocolos">
   <div class="container">
 
     <div class="section-head">
@@ -667,7 +692,7 @@
 
   </div>
 </section>
-  <section class="section" id="supervision">
+  <section class="section service-detail" id="supervision">
   <div class="container">
 
     <div class="section-head">
@@ -826,7 +851,7 @@
 
   </div>
 </section>
-  <section class="section" id="proyectos">
+  <section class="section service-detail" id="proyectos">
   <div class="container">
 
     <div class="section-head">
