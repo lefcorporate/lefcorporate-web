@@ -32,7 +32,7 @@
 <p class="lead">Publicaciones orientadas a interpretar cambios, anticipar impactos y convertir información relevante en criterios útiles para la gestión.</p>
 <div class="tagrow actualidad-filtros" style="margin:24px 0 35px"><button class="tag filtro-activo" type="button" data-filter="todas">Todas</button><button class="tag" type="button" data-filter="administracion">Administración</button><button class="tag" type="button" data-filter="security">Security</button><button class="tag" type="button" data-filter="capacitaciones">Capacitaciones</button><button class="tag" type="button" data-filter="normativa">Normativa</button><button class="tag" type="button" data-filter="analisis">Análisis LEF</button></div>
 
-<div class="notice" style="margin-bottom:35px"><div class="eyebrow">DESTACADO LEF · ACT-ADM-001</div><h3>Copropiedad y gestión: obligaciones que deben traducirse en control real.</h3><p>Un análisis sobre cómo las obligaciones, acuerdos y responsabilidades de una comunidad deben transformarse en seguimiento, respaldo y trazabilidad para fortalecer la gestión cotidiana.</p><p><strong>26 septiembre 2026 · LEF CORPORATE</strong></p><div class="hero-actions" style="margin-top:18px"><a class="btn btn-gold" href="act-adm-001-copropiedad-y-gestion.html">Leer análisis →</a></div></div>
+<div class="notice actualidad-destacado" data-tags="administracion normativa analisis" style="margin-bottom:35px"><div class="eyebrow">DESTACADO LEF · ACT-ADM-001</div><h3>Copropiedad y gestión: obligaciones que deben traducirse en control real.</h3><p>Un análisis sobre cómo las obligaciones, acuerdos y responsabilidades de una comunidad deben transformarse en seguimiento, respaldo y trazabilidad para fortalecer la gestión cotidiana.</p><p><strong>26 septiembre 2026 · LEF CORPORATE</strong></p><div class="hero-actions" style="margin-top:18px"><a class="btn btn-gold" href="act-adm-001-copropiedad-y-gestion.html">Leer análisis →</a></div></div>
 
 <div class="eyebrow">ÚLTIMAS PUBLICACIONES</div>
 <div class="article-grid" style="margin-top:18px">
@@ -60,4 +60,28 @@
     </div>
   </div>
   <div class="footer-bottom">© 2026 LEF CORPORATE. Sitio web LEF CORPORATE.</div>
-</div></footer><script src="assets/js/site.js"></script><style>.actualidad-filtros .tag{cursor:pointer;font:inherit}.actualidad-filtros .filtro-activo{background:#0D1B2A;color:#fff;border-color:#0D1B2A}.actualidad-item[hidden]{display:none}</style><script>document.addEventListener('DOMContentLoaded',function(){const f=document.querySelectorAll('.actualidad-filtros [data-filter]'),i=document.querySelectorAll('.actualidad-item');f.forEach(b=>b.addEventListener('click',()=>{const x=b.dataset.filter;f.forEach(z=>z.classList.remove('filtro-activo'));b.classList.add('filtro-activo');i.forEach(a=>a.hidden=x!=='todas'&&!a.dataset.tags.split(' ').includes(x))}))});</script></body></html>
+</div></footer><script src="assets/js/site.js"></script><style>
+.actualidad-filtros .tag{cursor:pointer;font:inherit}
+.actualidad-filtros .filtro-activo{background:#0D1B2A;color:#fff;border-color:#0D1B2A}
+.actualidad-item[hidden],.actualidad-destacado[hidden]{display:none!important}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  const filtros=document.querySelectorAll('.actualidad-filtros [data-filter]');
+  const items=document.querySelectorAll('.actualidad-item');
+  const destacado=document.querySelector('.actualidad-destacado');
+
+  function coincide(elemento,filtro){
+    if(filtro==='todas') return true;
+    return (elemento.dataset.tags||'').split(' ').includes(filtro);
+  }
+
+  filtros.forEach(boton=>boton.addEventListener('click',()=>{
+    const filtro=boton.dataset.filter;
+    filtros.forEach(b=>b.classList.remove('filtro-activo'));
+    boton.classList.add('filtro-activo');
+    items.forEach(item=>{ item.hidden=!coincide(item,filtro); });
+    if(destacado){ destacado.hidden=!coincide(destacado,filtro); }
+  }));
+});
+</script></body></html>
