@@ -32,45 +32,51 @@
 <div class="field"><label for="organizacion">Comunidad / organización</label><input id="organizacion" name="organizacion" autocomplete="organization"></div>
 <div class="grid-2"><div class="field"><label for="email">Correo</label><input id="email" name="email" type="email" autocomplete="email" required></div>
 <div class="field"><label for="telefono">Teléfono / WhatsApp</label><input id="telefono" name="telefono" type="tel" autocomplete="tel"></div></div>
-<div class="field"><label for="area">¿Qué necesita?</label><select id="area" name="area"><option>Administración de Comunidades</option><option>LEF SECURITY</option><option>LEF Capacitaciones</option><option>Solución integrada / No estoy seguro</option></select></div>
+<div class="field"><label for="area">¿Qué necesita?</label><select id="area" name="area" required>
+<option value="" selected disabled>Seleccione un área</option>
+<option value="Administración de Comunidades">Administración de Comunidades</option>
+<option value="LEF SECURITY">LEF SECURITY</option>
+<option value="LEF Capacitaciones">LEF Capacitaciones</option>
+<option value="LEF CORPORATE">LEF CORPORATE / No estoy seguro</option>
+</select></div>
 <div class="field"><label for="mensaje">Describa brevemente su necesidad</label><textarea id="mensaje" name="mensaje" required></textarea></div>
-<label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--gray)"><input type="checkbox" name="consentimiento" value="acepto" required style="margin-top:3px"> Acepto que mis datos sean utilizados para responder esta solicitud. La política de privacidad definitiva se incorporará antes de publicar el sitio.</label>
+<label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--gray)"><input type="checkbox" name="consentimiento" value="acepto" required style="margin-top:3px"> Acepto que mis datos sean utilizados únicamente para responder esta solicitud y gestionar el contacto relacionado con mi requerimiento.</label>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
   <button class="btn btn-gold" type="submit">Enviar solicitud</button>
-  >WhatsApp · +56 9 9808 0649</a>
+  <a class="btn btn-outline" href="https://wa.me/56998080649" target="_blank" rel="noopener">WhatsApp · +56 9 9808 0649</a>
 </div>
 <div class="form-status"></div>
 </form>
 <aside><div class="card"><div class="eyebrow">TRES PUERTAS DE ENTRADA</div><h3>Administración</h3><p>Gestión de comunidades.</p><h3>Security</h3><p>Seguridad y prevención.</p><h3>Capacitaciones</h3><p>Formación y desarrollo.</p></div>
-<div class="notice" style="margin-top:18px"><strong>¿No sabe qué elegir?</strong><br>Seleccione “Solución integrada / No estoy seguro”.</div></aside>
+<div class="notice" style="margin-top:18px"><strong>¿No sabe qué elegir?</strong><br>Seleccione “LEF CORPORATE / No estoy seguro” si su consulta involucra más de un área o si aún no tiene claro cuál corresponde.</div></aside>
 </div></section></main>
   <section class="section">
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">CONTACTO DIRECTO</div>
-      <h2>Elija el área con la que necesita comunicarse</h2>
+      <h2>Elija el área con la que necesita comunicarse</h2><p>También puede seleccionar una tarjeta para completar automáticamente el área del formulario.</p>
     </div>
 
    <div class="grid-3 contact-grid">
-      <div class="card">
+      <div class="card contact-area-card" role="button" tabindex="0" data-area="LEF CORPORATE">
         <h3>LEF CORPORATE</h3>
         <p>Consultas generales y coordinación institucional.</p>
         <p><a href="mailto:contacto@lefcorporate.cl">✉ contacto@lefcorporate.cl</a></p>
       </div>
 
-      <div class="card">
+      <div class="card contact-area-card" role="button" tabindex="0" data-area="Administración de Comunidades">
         <h3>LEF Administración de Comunidades</h3>
         <p>Administración y gestión integral de edificios y condominios.</p>
         <p><a href="mailto:administracion@lefcorporate.cl">✉ administracion@lefcorporate.cl</a></p>
       </div>
 
-      <div class="card">
+      <div class="card contact-area-card" role="button" tabindex="0" data-area="LEF SECURITY">
         <h3>LEF SECURITY</h3>
         <p>Seguridad privada, prevención, asesorías y proyectos.</p>
         <p><a href="mailto:security@lefcorporate.cl">✉ security@lefcorporate.cl</a></p>
       </div>
 
-      <div class="card">
+      <div class="card contact-area-card" role="button" tabindex="0" data-area="LEF Capacitaciones">
         <h3>LEF Capacitaciones · Academia LEF</h3>
         <p>Formación, capacitación y desarrollo profesional.</p>
         <p><a href="mailto:capacitaciones@lefcorporate.cl">✉ capacitaciones@lefcorporate.cl</a></p>
@@ -94,4 +100,22 @@
     </div>
   </div>
   <div class="footer-bottom">© 2026 LEF CORPORATE. Sitio web LEF CORPORATE.</div>
-</div></footer><script src="assets/js/site.js"></script></body></html>
+</div></footer><script src="assets/js/site.js"></script><style>
+.contact-area-card{cursor:pointer;transition:transform .15s ease,box-shadow .15s ease}
+.contact-area-card:hover,.contact-area-card:focus{transform:translateY(-2px);outline:2px solid #D9B12F;outline-offset:2px}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+ const select=document.getElementById('area');
+ const form=document.querySelector('[data-contact-form]');
+ document.querySelectorAll('.contact-area-card').forEach(function(card){
+   function elegir(){
+     if(select){ select.value=card.dataset.area; }
+     if(form){ form.scrollIntoView({behavior:'smooth',block:'start'}); }
+     setTimeout(function(){ if(select) select.focus(); },350);
+   }
+   card.addEventListener('click',function(e){ if(!e.target.closest('a')) elegir(); });
+   card.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();elegir();} });
+ });
+});
+</script></body></html>
