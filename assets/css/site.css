@@ -143,7 +143,7 @@ h3{font-size:21px;margin:12px 0}
   display:flex;
   align-items:center;
   overflow:hidden;
-  background:url("../img/hero-lef-corporate.png") center center / cover no-repeat;
+  background:url("../img/hero-lef-corporate.png.png") center center / cover no-repeat;
 }
 
 .hero-corporate .hero-overlay{
