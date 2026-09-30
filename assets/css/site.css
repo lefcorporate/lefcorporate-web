@@ -135,3 +135,102 @@ h3{font-size:21px;margin:12px 0}
   line-height:1.75;
   margin-top:14px;
 }
+/* HERO LEF CORPORATE — imagen institucional */
+.hero-corporate{
+  position:relative;
+  min-height:650px;
+  padding:0;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:url("../img/hero-lef-corporate.png") center center / cover no-repeat;
+}
+
+.hero-corporate .hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(8,21,34,.88) 0%,
+    rgba(8,21,34,.76) 38%,
+    rgba(8,21,34,.34) 68%,
+    rgba(8,21,34,.12) 100%
+  );
+}
+
+.hero-corporate-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  padding-top:80px;
+  padding-bottom:80px;
+}
+
+.hero-corporate-copy{
+  max-width:720px;
+}
+
+.hero-corporate h1{
+  color:#fff;
+  text-shadow:0 2px 14px rgba(0,0,0,.28);
+}
+
+.hero-corporate .lead{
+  color:#f2f5f7;
+  max-width:680px;
+  text-shadow:0 1px 8px rgba(0,0,0,.25);
+}
+
+.hero-corporate .eyebrow{
+  color:var(--gold);
+}
+
+.btn-hero-outline{
+  border-color:rgba(255,255,255,.85);
+  color:#fff;
+  background:rgba(8,21,34,.22);
+  backdrop-filter:blur(3px);
+}
+
+.btn-hero-outline:hover{
+  background:#fff;
+  color:var(--navy);
+}
+
+@media(max-width:980px){
+  .hero-corporate{
+    min-height:600px;
+    background-position:center center;
+  }
+
+  .hero-corporate .hero-overlay{
+    background:rgba(8,21,34,.66);
+  }
+}
+
+@media(max-width:640px){
+  .hero-corporate{
+    min-height:620px;
+    padding:0;
+    background-position:58% center;
+  }
+
+  .hero-corporate-content{
+    padding-top:60px;
+    padding-bottom:60px;
+  }
+
+  .hero-corporate h1{
+    font-size:40px;
+    line-height:1.05;
+  }
+
+  .hero-corporate .lead{
+    font-size:17px;
+    line-height:1.55;
+  }
+
+  .hero-corporate .hero-overlay{
+    background:rgba(8,21,34,.72);
+  }
+}
